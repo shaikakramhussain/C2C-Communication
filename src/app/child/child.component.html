@@ -1,0 +1,9 @@
+<div>
+    <h1 class="text-center">This is Child Component- {{uname}}</h1>
+    <button (click)="passData()">Send data back to parent</button>
+</div>
+
+
+<input type="textbox" [(ngModel)]='masterName'>
+<button (click)="sendToParent(masterName)">sendToParent</button>
+<div>{{masterName}}</div>

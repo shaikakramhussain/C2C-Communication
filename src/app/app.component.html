@@ -1,0 +1,15 @@
+<div>
+  <h1 class="text-center">Parent Component - Root Component</h1>
+  <p>{{childData}}</p>
+  <span>Master to Child</span>
+  <input type="textbox" [(ngModel)]='master'>
+ <div> {{master}}</div>
+</div>
+
+<div>
+  <app-child (notify)="parentMethod($event)" 
+  [uname]="username"
+  [childToMaster]=master
+  (childToParent)="childToParent($event)">
+</app-child>  
+</div>
